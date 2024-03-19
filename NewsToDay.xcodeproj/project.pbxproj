@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		777A2D662BAA47BF006B3D4C /* NewsNetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = 777A2D652BAA47BF006B3D4C /* NewsNetworkManager */; };
 		77F677912BA9C47E00137EAF /* AuthorizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F677902BA9C47E00137EAF /* AuthorizeView.swift */; };
 		77F677932BA9C9BA00137EAF /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F677922BA9C9BA00137EAF /* UIApplication+Extension.swift */; };
 		77F677972BA9CB8A00137EAF /* AuthorizeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F677962BA9CB8A00137EAF /* AuthorizeStore.swift */; };
@@ -66,6 +67,7 @@
 				77F6779C2BA9CFCA00137EAF /* FirebaseAppCheck in Frameworks */,
 				77F677A42BA9CFCA00137EAF /* FirebaseFirestore in Frameworks */,
 				77F6779E2BA9CFCA00137EAF /* FirebaseAuth in Frameworks */,
+				777A2D662BAA47BF006B3D4C /* NewsNetworkManager in Frameworks */,
 				77F677A62BA9CFCA00137EAF /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +244,7 @@
 				77F677A12BA9CFCA00137EAF /* FirebaseDatabaseSwift */,
 				77F677A32BA9CFCA00137EAF /* FirebaseFirestore */,
 				77F677A52BA9CFCA00137EAF /* FirebaseFirestoreSwift */,
+				777A2D652BAA47BF006B3D4C /* NewsNetworkManager */,
 			);
 			productName = NewsToDay;
 			productReference = 899C63182BA738C800BD32B4 /* NewsToDay.app */;
@@ -273,6 +276,7 @@
 			mainGroup = 899C630F2BA738C800BD32B4;
 			packageReferences = (
 				77F6779A2BA9CFCA00137EAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				777A2D642BAA47BF006B3D4C /* XCRemoteSwiftPackageReference "NewsApiNetworkManager" */,
 			);
 			productRefGroup = 899C63192BA738C800BD32B4 /* Products */;
 			projectDirPath = "";
@@ -537,6 +541,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		777A2D642BAA47BF006B3D4C /* XCRemoteSwiftPackageReference "NewsApiNetworkManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/viktorporch/NewsApiNetworkManager";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		77F6779A2BA9CFCA00137EAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -548,6 +560,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		777A2D652BAA47BF006B3D4C /* NewsNetworkManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 777A2D642BAA47BF006B3D4C /* XCRemoteSwiftPackageReference "NewsApiNetworkManager" */;
+			productName = NewsNetworkManager;
+		};
 		77F6779B2BA9CFCA00137EAF /* FirebaseAppCheck */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 77F6779A2BA9CFCA00137EAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
