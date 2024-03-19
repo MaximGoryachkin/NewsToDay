@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7797FE2D2BA9BAEA004689A9 /* NewsNetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = 7797FE2C2BA9BAEA004689A9 /* NewsNetworkManager */; };
 		899C631C2BA738C800BD32B4 /* NewsToDayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C631B2BA738C800BD32B4 /* NewsToDayApp.swift */; };
 		899C63202BA738C900BD32B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899C631F2BA738C900BD32B4 /* Assets.xcassets */; };
 		899C63232BA738C900BD32B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899C63222BA738C900BD32B4 /* Preview Assets.xcassets */; };
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7797FE2D2BA9BAEA004689A9 /* NewsNetworkManager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +180,9 @@
 			dependencies = (
 			);
 			name = NewsToDay;
+			packageProductDependencies = (
+				7797FE2C2BA9BAEA004689A9 /* NewsNetworkManager */,
+			);
 			productName = NewsToDay;
 			productReference = 899C63182BA738C800BD32B4 /* NewsToDay.app */;
 			productType = "com.apple.product-type.application";
@@ -206,6 +211,9 @@
 				Base,
 			);
 			mainGroup = 899C630F2BA738C800BD32B4;
+			packageReferences = (
+				7797FE2B2BA9BAEA004689A9 /* XCRemoteSwiftPackageReference "NewsApiNetworkManager" */,
+			);
 			productRefGroup = 899C63192BA738C800BD32B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -456,6 +464,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7797FE2B2BA9BAEA004689A9 /* XCRemoteSwiftPackageReference "NewsApiNetworkManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/viktorporch/NewsApiNetworkManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7797FE2C2BA9BAEA004689A9 /* NewsNetworkManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7797FE2B2BA9BAEA004689A9 /* XCRemoteSwiftPackageReference "NewsApiNetworkManager" */;
+			productName = NewsNetworkManager;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 899C63102BA738C800BD32B4 /* Project object */;
 }

@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "newsapinetworkmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/viktorporch/NewsApiNetworkManager",
+      "state" : {
+        "revision" : "07b5c506fa6074079369df0afc3a7877c66c0414",
+        "version" : "1.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}
