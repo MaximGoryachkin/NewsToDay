@@ -100,6 +100,15 @@
       }
     },
     {
+      "identity" : "newsapinetworkmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/viktorporch/NewsApiNetworkManager",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6c1f77ffe6a43087cb02db769eab8aceda29c2e3"
+      }
+    },
+    {
       "identity" : "promises",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/promises.git",
