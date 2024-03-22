@@ -32,6 +32,12 @@
 		899C63372BA74B7C00BD32B4 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899C632F2BA7404F00BD32B4 /* Inter-SemiBold.ttf */; };
 		899C63412BA74E8500BD32B4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899C63402BA74E8500BD32B4 /* Launch Screen.storyboard */; };
 		899C63432BA74F0300BD32B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C63422BA74F0300BD32B4 /* ContentView.swift */; };
+		CAA13AF42BAE21CA00B2CDD9 /* NavLinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA13AF32BAE21CA00B2CDD9 /* NavLinkButton.swift */; };
+		CAA13AF62BAE21D900B2CDD9 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA13AF52BAE21D900B2CDD9 /* Language.swift */; };
+		CAA13AF82BAE21E800B2CDD9 /* TermsAndConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA13AF72BAE21E800B2CDD9 /* TermsAndConditionsView.swift */; };
+		CAA13AFA2BAE220700B2CDD9 /* PersonalAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA13AF92BAE220700B2CDD9 /* PersonalAccountView.swift */; };
+		CAA13AFC2BAE222900B2CDD9 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA13AFB2BAE222900B2CDD9 /* ProfileHeaderView.swift */; };
+		CAA13AFE2BAE224100B2CDD9 /* AccountDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA13AFD2BAE224100B2CDD9 /* AccountDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +61,12 @@
 		899C63322BA7415200BD32B4 /* Font + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font + ext.swift"; sourceTree = "<group>"; };
 		899C63402BA74E8500BD32B4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		899C63422BA74F0300BD32B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CAA13AF32BAE21CA00B2CDD9 /* NavLinkButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavLinkButton.swift; sourceTree = "<group>"; };
+		CAA13AF52BAE21D900B2CDD9 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		CAA13AF72BAE21E800B2CDD9 /* TermsAndConditionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsView.swift; sourceTree = "<group>"; };
+		CAA13AF92BAE220700B2CDD9 /* PersonalAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalAccountView.swift; sourceTree = "<group>"; };
+		CAA13AFB2BAE222900B2CDD9 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		CAA13AFD2BAE224100B2CDD9 /* AccountDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +183,7 @@
 		899C63392BA74BFC00BD32B4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				899C633D2BA74C5400BD32B4 /* Profile */,
+				CAA13AF22BAE20B500B2CDD9 /* Profile */,
 				899C633C2BA74C4900BD32B4 /* Bookmarks */,
 				899C633B2BA74C3E00BD32B4 /* Categories */,
 				899C633A2BA74C0500BD32B4 /* Home */,
@@ -203,13 +215,6 @@
 			path = Bookmarks;
 			sourceTree = "<group>";
 		};
-		899C633D2BA74C5400BD32B4 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
 		899C63442BA74F3800BD32B4 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +224,19 @@
 				899C63312BA7406C00BD32B4 /* Info.plist */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		CAA13AF22BAE20B500B2CDD9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CAA13AF92BAE220700B2CDD9 /* PersonalAccountView.swift */,
+				CAA13AFB2BAE222900B2CDD9 /* ProfileHeaderView.swift */,
+				CAA13AFD2BAE224100B2CDD9 /* AccountDetailsView.swift */,
+				CAA13AF72BAE21E800B2CDD9 /* TermsAndConditionsView.swift */,
+				CAA13AF52BAE21D900B2CDD9 /* Language.swift */,
+				CAA13AF32BAE21CA00B2CDD9 /* NavLinkButton.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,13 +329,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				77F677972BA9CB8A00137EAF /* AuthorizeStore.swift in Sources */,
+				CAA13AFE2BAE224100B2CDD9 /* AccountDetailsView.swift in Sources */,
 				899C631C2BA738C800BD32B4 /* NewsToDayApp.swift in Sources */,
 				899C63332BA7415200BD32B4 /* Font + ext.swift in Sources */,
 				77F677AD2BAA09E800137EAF /* AuthorizeService.swift in Sources */,
 				899C63432BA74F0300BD32B4 /* ContentView.swift in Sources */,
 				77F677912BA9C47E00137EAF /* AuthorizeView.swift in Sources */,
 				77F677932BA9C9BA00137EAF /* UIApplication+Extension.swift in Sources */,
+				CAA13AFC2BAE222900B2CDD9 /* ProfileHeaderView.swift in Sources */,
+				CAA13AF82BAE21E800B2CDD9 /* TermsAndConditionsView.swift in Sources */,
 				77F677992BA9CB9500137EAF /* AuthorizeReducer.swift in Sources */,
+				CAA13AF42BAE21CA00B2CDD9 /* NavLinkButton.swift in Sources */,
+				CAA13AFA2BAE220700B2CDD9 /* PersonalAccountView.swift in Sources */,
+				CAA13AF62BAE21D900B2CDD9 /* Language.swift in Sources */,
 				77F677AA2BA9FFF300137EAF /* StorageService.swift in Sources */,
 				899C632C2BA73B7A00BD32B4 /* Color + ext.swift in Sources */,
 			);
