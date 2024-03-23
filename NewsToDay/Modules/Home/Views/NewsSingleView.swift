@@ -25,7 +25,7 @@ struct NewsSingleView: View {
             )
             .overlay(
                 Button {
-                    
+                    print("Button tapped")
                 } label: {
                     Image(systemName: "bookmark")
                         .foregroundColor(.white)

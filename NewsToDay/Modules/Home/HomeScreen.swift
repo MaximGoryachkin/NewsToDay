@@ -12,21 +12,29 @@ struct HomeScreen: View {
     
     
     var body: some View {
-        NavigationView  {
+        NavigationView {
             ScrollView {
                 VStack(spacing: 16){
                     Text("Discover things of this word")
-                        .padding(.top, 40)
+                        .font(Font.interRegular16)
+                        .foregroundStyle(Color.grayPrimary)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding()
+                        .padding(.horizontal)
                     
-                    TextField("Search", text: $searchText)
-                        .padding()
-                        .background(Color.grayLighter)
-                        .cornerRadius(10)
-                        .padding(.horizontal, 20)
-                        .padding(.vertical, 10)
-                    
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .font(.title3)
+                            .foregroundColor(Color.grayPrimary)
+                            .padding()
+                        
+                        TextField("", text: $searchText)
+                            .font(.title3)
+                            .foregroundColor(.gray)
+                            .background(Color.grayLighter)
+                    }
+                    .background(Color.grayLighter)
+                    .cornerRadius(10)
+                    .padding()
                     
                     CategoriesHorizontalScroll()
                     
@@ -52,6 +60,7 @@ struct HomeScreen: View {
                     NewsVerticalScroll()
                 }
             }
+            .navigationTitle("Browse")
         }
     }
 }
