@@ -54,15 +54,6 @@ struct Language: View {
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 }
             }
-//            Button(action: {
-//                buttonColor = buttonColor == Color.v ? Color.blackPrimary : Color.v
-//            }) {
-//                Text("Russian")
-//                    .foregroundColor(.black)
-//                    .padding()
-//                    .background(buttonColor)
-//                    .cornerRadius(10)
-//            }
         }
     }
 }
