@@ -16,8 +16,18 @@ final actor StorageService {
     }
     
     private var userName: String?
+    private var userEmail: String?
     private var favoriteCategories = [String]()
     private var bookmarks = [String]()
+    var needToShowOnbording: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: "needToShowOnbording")
+        }
+        
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "needToShowOnbording")
+        }
+    }
     
     private init() {
         
@@ -53,6 +63,23 @@ final actor StorageService {
         
         let ref = Database.database().reference().child("users").child(userId)
         _ = try? await ref.updateChildValues(["username": name])
+    }
+    
+    func getUserEmail() async throws -> String? {
+        guard let userId else {
+            return nil
+        }
+        
+        if let userEmail {
+            return userEmail
+        }
+        
+        let ref = Database.database().reference().child("users").child(userId).child("email")
+        guard let snapshot = try? await ref.getData() else {
+            return nil
+        }
+        userEmail = snapshot.value as? String
+        return userEmail
     }
     
     func setFavoriteCategories(categories: [String]) async throws {
@@ -110,5 +137,9 @@ final actor StorageService {
         }
         bookmarks = snapshot.value as? [String] ?? []
         return bookmarks
+    }
+    
+    func setNeedToShowOnbording(_ value: Bool) {
+        needToShowOnbording = value
     }
 }

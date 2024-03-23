@@ -14,6 +14,11 @@ final class AuthorizeStore: ObservableObject {
         error: nil
     )
     private let reducer = AuthorizeReducer()
+    private let router: RouterService
+    
+    init(router: RouterService) {
+        self.router = router
+    }
     
     func dispatch(action: Action) {
         switch action {
@@ -27,7 +32,7 @@ final class AuthorizeStore: ObservableObject {
                 @MainActor in
                 do {
                     try await reducer.authorize(email: model.email, password: model.password)
-                    
+                    router.openApp()
                 } catch {
                     self.state = .init(loginType: .signIn, error: error.localizedDescription)
                 }
@@ -43,6 +48,7 @@ final class AuthorizeStore: ObservableObject {
                 
                 do {
                     try await reducer.register(username: model.username, email: model.email, password: model.password)
+                    router.openApp()
                 } catch {
                     self.state = .init(loginType: .signUp, error: error.localizedDescription)
                 }

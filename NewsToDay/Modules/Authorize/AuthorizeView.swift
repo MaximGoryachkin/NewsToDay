@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AuthorizeView: View {
     
-    @ObservedObject var store = AuthorizeStore()
+    @ObservedObject var store: AuthorizeStore
     
     @State private var email = ""
     @State private var password = ""
@@ -17,6 +17,10 @@ struct AuthorizeView: View {
     @State private var userName = ""
     @State private var isAlertPresenting = false
     @State private var alertMessage = ""
+    
+    init(router: RouterService) {
+        store = AuthorizeStore(router: router)
+    }
     
     var body: some View {
         
@@ -187,5 +191,5 @@ private extension View {
 }
 
 #Preview {
-    AuthorizeView(store: .init())
+    AuthorizeView(router: RouterService())
 }
