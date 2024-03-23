@@ -32,6 +32,13 @@
 		899C63372BA74B7C00BD32B4 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899C632F2BA7404F00BD32B4 /* Inter-SemiBold.ttf */; };
 		899C63412BA74E8500BD32B4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899C63402BA74E8500BD32B4 /* Launch Screen.storyboard */; };
 		899C63432BA74F0300BD32B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C63422BA74F0300BD32B4 /* ContentView.swift */; };
+		CAA13B012BAE346900B2CDD9 /* NavLinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA13B002BAE346900B2CDD9 /* NavLinkButton.swift */; };
+		CAA13B032BAE347300B2CDD9 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA13B022BAE347300B2CDD9 /* Language.swift */; };
+		CAA13B052BAE347D00B2CDD9 /* TermsAndConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA13B042BAE347D00B2CDD9 /* TermsAndConditionsView.swift */; };
+		CAA13B072BAE348900B2CDD9 /* AccountDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA13B062BAE348900B2CDD9 /* AccountDetailsView.swift */; };
+		CAA13B092BAE349100B2CDD9 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA13B082BAE349100B2CDD9 /* ProfileHeaderView.swift */; };
+		CAA13B0B2BAE349B00B2CDD9 /* PersonalAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA13B0A2BAE349B00B2CDD9 /* PersonalAccountView.swift */; };
+		CAA13B0D2BAE34D200B2CDD9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA13B0C2BAE34D200B2CDD9 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +62,13 @@
 		899C63322BA7415200BD32B4 /* Font + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font + ext.swift"; sourceTree = "<group>"; };
 		899C63402BA74E8500BD32B4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		899C63422BA74F0300BD32B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CAA13B002BAE346900B2CDD9 /* NavLinkButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavLinkButton.swift; sourceTree = "<group>"; };
+		CAA13B022BAE347300B2CDD9 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		CAA13B042BAE347D00B2CDD9 /* TermsAndConditionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsView.swift; sourceTree = "<group>"; };
+		CAA13B062BAE348900B2CDD9 /* AccountDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsView.swift; sourceTree = "<group>"; };
+		CAA13B082BAE349100B2CDD9 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		CAA13B0A2BAE349B00B2CDD9 /* PersonalAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalAccountView.swift; sourceTree = "<group>"; };
+		CAA13B0C2BAE34D200B2CDD9 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +185,7 @@
 		899C63392BA74BFC00BD32B4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				899C633D2BA74C5400BD32B4 /* Profile */,
+				CAA13AFF2BAE344F00B2CDD9 /* Profile */,
 				899C633C2BA74C4900BD32B4 /* Bookmarks */,
 				899C633B2BA74C3E00BD32B4 /* Categories */,
 				899C633A2BA74C0500BD32B4 /* Home */,
@@ -203,13 +217,6 @@
 			path = Bookmarks;
 			sourceTree = "<group>";
 		};
-		899C633D2BA74C5400BD32B4 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
 		899C63442BA74F3800BD32B4 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +226,20 @@
 				899C63312BA7406C00BD32B4 /* Info.plist */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		CAA13AFF2BAE344F00B2CDD9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CAA13B0A2BAE349B00B2CDD9 /* PersonalAccountView.swift */,
+				CAA13B082BAE349100B2CDD9 /* ProfileHeaderView.swift */,
+				CAA13B062BAE348900B2CDD9 /* AccountDetailsView.swift */,
+				CAA13B042BAE347D00B2CDD9 /* TermsAndConditionsView.swift */,
+				CAA13B022BAE347300B2CDD9 /* Language.swift */,
+				CAA13B0C2BAE34D200B2CDD9 /* OnboardingView.swift */,
+				CAA13B002BAE346900B2CDD9 /* NavLinkButton.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA13B0B2BAE349B00B2CDD9 /* PersonalAccountView.swift in Sources */,
 				77F677972BA9CB8A00137EAF /* AuthorizeStore.swift in Sources */,
 				899C631C2BA738C800BD32B4 /* NewsToDayApp.swift in Sources */,
 				899C63332BA7415200BD32B4 /* Font + ext.swift in Sources */,
@@ -317,9 +339,15 @@
 				899C63432BA74F0300BD32B4 /* ContentView.swift in Sources */,
 				77F677912BA9C47E00137EAF /* AuthorizeView.swift in Sources */,
 				77F677932BA9C9BA00137EAF /* UIApplication+Extension.swift in Sources */,
+				CAA13B092BAE349100B2CDD9 /* ProfileHeaderView.swift in Sources */,
+				CAA13B052BAE347D00B2CDD9 /* TermsAndConditionsView.swift in Sources */,
 				77F677992BA9CB9500137EAF /* AuthorizeReducer.swift in Sources */,
+				CAA13B012BAE346900B2CDD9 /* NavLinkButton.swift in Sources */,
+				CAA13B032BAE347300B2CDD9 /* Language.swift in Sources */,
 				77F677AA2BA9FFF300137EAF /* StorageService.swift in Sources */,
 				899C632C2BA73B7A00BD32B4 /* Color + ext.swift in Sources */,
+				CAA13B0D2BAE34D200B2CDD9 /* OnboardingView.swift in Sources */,
+				CAA13B072BAE348900B2CDD9 /* AccountDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
