@@ -52,16 +52,15 @@ struct OnboardingView: View {
                 .padding()
           
             OnboardingButtonView(title: data.data[counter].buttonTitle) {
-                data.updateModel(with: counter)
                 guard counter + 1 < data.data.count else {
                     router.openFavoriteTopics()
                     return
                 }
+                data.updateModel(with: counter)
                 counter += 1
                 if counter <= 2 {
                     xPoint -= contentSize
-                } else {
-                    dismiss()
+                    data.updateModel(with: counter)
                 }
             }
             
