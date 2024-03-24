@@ -21,6 +21,9 @@
 		77F677A82BA9FF0100137EAF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77F677A72BA9FF0100137EAF /* GoogleService-Info.plist */; };
 		77F677AA2BA9FFF300137EAF /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F677A92BA9FFF300137EAF /* StorageService.swift */; };
 		77F677AD2BAA09E800137EAF /* AuthorizeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F677AC2BAA09E800137EAF /* AuthorizeService.swift */; };
+		77FF1F8C2BAF6F1C0012C173 /* RouterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF1F8B2BAF6F1C0012C173 /* RouterService.swift */; };
+		77FF1F8E2BAF73790012C173 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF1F8D2BAF73790012C173 /* ContentView.swift */; };
+		77FF1F922BAF7DA20012C173 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF1F912BAF7DA20012C173 /* CategoriesView.swift */; };
 		8913AEB52BAED2DA00A92C84 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8913AEB42BAED2DA00A92C84 /* OnboardingModel.swift */; };
 		8913AEB72BAED3AC00A92C84 /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8913AEB62BAED3AC00A92C84 /* OnboardingCardView.swift */; };
 		8913AEB92BAEEFB700A92C84 /* OnboardingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8913AEB82BAEEFB700A92C84 /* OnboardingButtonView.swift */; };
@@ -34,7 +37,6 @@
 		899C63362BA74B7900BD32B4 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899C63302BA7404F00BD32B4 /* Inter-Regular.ttf */; };
 		899C63372BA74B7C00BD32B4 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899C632F2BA7404F00BD32B4 /* Inter-SemiBold.ttf */; };
 		899C63412BA74E8500BD32B4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899C63402BA74E8500BD32B4 /* Launch Screen.storyboard */; };
-		899C63432BA74F0300BD32B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C63422BA74F0300BD32B4 /* ContentView.swift */; };
 		92B345782BAF489E00540F50 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B345772BAF489E00540F50 /* TabBar.swift */; };
 		92B3457A2BAF48B800540F50 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B345792BAF48B800540F50 /* HomeScreen.swift */; };
 		92B345812BAF48BD00540F50 /* NewsVerticalScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B3457C2BAF48BD00540F50 /* NewsVerticalScroll.swift */; };
@@ -59,6 +61,9 @@
 		77F677A72BA9FF0100137EAF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77F677A92BA9FFF300137EAF /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		77F677AC2BAA09E800137EAF /* AuthorizeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeService.swift; sourceTree = "<group>"; };
+		77FF1F8B2BAF6F1C0012C173 /* RouterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterService.swift; sourceTree = "<group>"; };
+		77FF1F8D2BAF73790012C173 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		77FF1F912BAF7DA20012C173 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		8913AEB42BAED2DA00A92C84 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		8913AEB62BAED3AC00A92C84 /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
 		8913AEB82BAEEFB700A92C84 /* OnboardingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButtonView.swift; sourceTree = "<group>"; };
@@ -74,7 +79,6 @@
 		899C63312BA7406C00BD32B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		899C63322BA7415200BD32B4 /* Font + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font + ext.swift"; sourceTree = "<group>"; };
 		899C63402BA74E8500BD32B4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		899C63422BA74F0300BD32B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		92B345772BAF489E00540F50 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		92B345792BAF48B800540F50 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		92B3457C2BAF48BD00540F50 /* NewsVerticalScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsVerticalScroll.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 		77F677AB2BAA037400137EAF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				77FF1F8B2BAF6F1C0012C173 /* RouterService.swift */,
 				77F677A92BA9FFF300137EAF /* StorageService.swift */,
 				77F677AC2BAA09E800137EAF /* AuthorizeService.swift */,
 			);
@@ -210,12 +215,11 @@
 			isa = PBXGroup;
 			children = (
 				92B345772BAF489E00540F50 /* TabBar.swift */,
+				77FF1F8D2BAF73790012C173 /* ContentView.swift */,
+				77FF1F912BAF7DA20012C173 /* CategoriesView.swift */,
 				8913AEB32BAEC23900A92C84 /* Onboarding */,
 				CAA13AFF2BAE344F00B2CDD9 /* Profile */,
-				899C633C2BA74C4900BD32B4 /* Bookmarks */,
-				899C633B2BA74C3E00BD32B4 /* Categories */,
 				899C633A2BA74C0500BD32B4 /* Home */,
-				899C63422BA74F0300BD32B4 /* ContentView.swift */,
 				77F677942BA9CAC700137EAF /* Authorize */,
 			);
 			path = Modules;
@@ -228,20 +232,6 @@
 				92B3457B2BAF48BD00540F50 /* Views */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		899C633B2BA74C3E00BD32B4 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		899C633C2BA74C4900BD32B4 /* Bookmarks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Bookmarks;
 			sourceTree = "<group>";
 		};
 		899C63442BA74F3800BD32B4 /* Application */ = {
@@ -369,7 +359,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77FF1F8C2BAF6F1C0012C173 /* RouterService.swift in Sources */,
 				CAA13B0B2BAE349B00B2CDD9 /* PersonalAccountView.swift in Sources */,
+				77FF1F8E2BAF73790012C173 /* ContentView.swift in Sources */,
 				92B345822BAF48BD00540F50 /* NewsSingleView.swift in Sources */,
 				77F677972BA9CB8A00137EAF /* AuthorizeStore.swift in Sources */,
 				899C631C2BA738C800BD32B4 /* NewsToDayApp.swift in Sources */,
@@ -377,13 +369,13 @@
 				92B345812BAF48BD00540F50 /* NewsVerticalScroll.swift in Sources */,
 				92B3457A2BAF48B800540F50 /* HomeScreen.swift in Sources */,
 				77F677AD2BAA09E800137EAF /* AuthorizeService.swift in Sources */,
-				899C63432BA74F0300BD32B4 /* ContentView.swift in Sources */,
 				92B345782BAF489E00540F50 /* TabBar.swift in Sources */,
 				77F677912BA9C47E00137EAF /* AuthorizeView.swift in Sources */,
 				8913AEB72BAED3AC00A92C84 /* OnboardingCardView.swift in Sources */,
 				77F677932BA9C9BA00137EAF /* UIApplication+Extension.swift in Sources */,
 				CAA13B092BAE349100B2CDD9 /* ProfileHeaderView.swift in Sources */,
 				CAA13B052BAE347D00B2CDD9 /* TermsAndConditionsView.swift in Sources */,
+				77FF1F922BAF7DA20012C173 /* CategoriesView.swift in Sources */,
 				8913AEB92BAEEFB700A92C84 /* OnboardingButtonView.swift in Sources */,
 				77F677992BA9CB9500137EAF /* AuthorizeReducer.swift in Sources */,
 				92B345832BAF48BD00540F50 /* NewsHorizontalScroll.swift in Sources */,
@@ -621,8 +613,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/viktorporch/NewsApiNetworkManager";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
 			};
 		};
 		77F6779A2BA9CFCA00137EAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {

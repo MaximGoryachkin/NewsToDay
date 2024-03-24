@@ -30,11 +30,17 @@ final actor AuthorizeService {
         }
         
         let ref = Database.database().reference().child("users").child(uid)
-        try await ref.setValue(["username": username])
+        try await ref.setValue(["username": username, "email": email])
+        await StorageService.shared.setNeedToShowOnbording(true)
     }
     
-    func logout() async {
-        try? Auth.auth().signOut()
-        await StorageService.shared.logout()
+    func logout() async -> Bool {
+        do {
+            try Auth.auth().signOut()
+            await StorageService.shared.logout()
+            return true
+        } catch {
+            return false
+        }
     }
 }

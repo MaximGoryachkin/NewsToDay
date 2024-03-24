@@ -7,17 +7,21 @@
 
 import SwiftUI
 struct AccountDetailsView: View {
+    
+    @Binding var username: String
+    @Binding var email: String
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Ivan")
+            Text(username)
                 .font(.title)
                 .fontWeight(.bold)
-            Text("example@example.com")
+            Text(email)
         }
         .padding()
     }
 }
 
 #Preview {
-    AccountDetailsView()
+    AccountDetailsView(username: .constant("username"), email: .constant("email@mail.ru"))
 }

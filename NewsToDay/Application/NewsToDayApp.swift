@@ -13,10 +13,10 @@ import FirebaseAuth
 @main
 struct NewsToDayApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
+    
     var body: some Scene {
         WindowGroup {
-            AuthorizeView()
+            ContentView()
         }
     }
 }

@@ -9,6 +9,11 @@ import SwiftUI
 
 struct TabBar: View {
     @State private var selectedView = 0
+    private var router: RouterService
+    
+    init(router: RouterService) {
+        self.router = router
+    }
     
     var body: some View {
             TabView(selection: $selectedView) {
@@ -18,7 +23,7 @@ struct TabBar: View {
                     }
                     .tag(0)
                 
-                Text("Categories Screen")
+                CategoriesView(flow: .main, router: router)
                     .tabItem {
                         Image(selectedView == 1 ? "icon.categories.hl" : "icon.categories")
                     }
@@ -30,7 +35,7 @@ struct TabBar: View {
                     }
                     .tag(2)
                 
-                PersonalAccountView()
+                PersonalAccountView(router: router)
                     .tabItem {
                         Image(selectedView == 3 ? "icon.profile.hl" : "icon.profile")
                     }
@@ -40,6 +45,6 @@ struct TabBar: View {
 }
 
 #Preview {
-    TabBar()
+    TabBar(router: RouterService())
 }
 

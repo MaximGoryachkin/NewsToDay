@@ -13,7 +13,12 @@ struct OnboardingView: View {
     @State private var counter = 0
     @State private var contentSize: CGFloat = 318
     @State private var data = OnboardingData()
+    private let router: RouterService
     private let spacing: CGFloat = 30
+    
+    init(router: RouterService) {
+        self.router = router
+    }
     
     var body: some View {
         VStack {
@@ -48,22 +53,25 @@ struct OnboardingView: View {
           
             OnboardingButtonView(title: data.data[counter].buttonTitle) {
                 data.updateModel(with: counter)
+                guard counter + 1 < data.data.count else {
+                    router.openFavoriteTopics()
+                    return
+                }
                 counter += 1
                 if counter <= 2 {
                     xPoint -= contentSize
                 } else {
                     dismiss()
                 }
-                data.updateModel(with: counter)
             }
             
         }
-        .animation(.spring)
+        .animation(.spring, value: counter)
     }
 }
 
 
 
 #Preview {
-    OnboardingView()
+    OnboardingView(router: RouterService())
 }

@@ -52,7 +52,7 @@ struct HomeScreen: View {
                             
                         } label: {
                             Text("See All")
-                                .foregroundColor(Color.graykDark)
+                                .foregroundColor(Color.grayDarker)
                         }
                         .padding()
                     }

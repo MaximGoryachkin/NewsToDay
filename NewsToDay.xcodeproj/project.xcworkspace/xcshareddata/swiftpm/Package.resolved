@@ -104,8 +104,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/viktorporch/NewsApiNetworkManager",
       "state" : {
-        "branch" : "main",
-        "revision" : "6c1f77ffe6a43087cb02db769eab8aceda29c2e3"
+        "revision" : "cd4e569d8bf473da73f0a5016fb96817ae6a998d",
+        "version" : "1.0.4"
       }
     },
     {
