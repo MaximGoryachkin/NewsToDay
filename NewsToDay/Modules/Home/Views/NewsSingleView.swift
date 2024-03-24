@@ -35,21 +35,28 @@ struct NewsSingleView: View {
                     .padding(), alignment: .trailing
             )
             .overlay(
-                Text(category)
-                    .foregroundColor(.white)
-                    .font(.interMedium16)
-                    .offset(y: 50)
-                    .padding(), alignment: .leading
+                Button {
                     
-            )
-            .overlay(
-                Text(title)
-                    .foregroundColor(.white)
-                    .font(.interBold16)
-                    .offset(y: 85)
-                    .padding(), alignment: .leading
-            
-            )
+                } label: {
+                    VStack {
+                        Text(category)
+                            .fontWeight(.thin)
+                            .foregroundColor(.white)
+                            .font(.interMedium16)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.vertical, 7)
+                        
+                        Text(title)
+                            .foregroundColor(.white)
+                            .font(.interBold16)
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            
+                        
+                    }
+                    .padding()
+                }, alignment: .bottomLeading
+                )
     }
 }
 

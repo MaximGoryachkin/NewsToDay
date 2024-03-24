@@ -82,7 +82,7 @@
 		92B345772BAF489E00540F50 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		92B345792BAF48B800540F50 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		92B3457C2BAF48BD00540F50 /* NewsVerticalScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsVerticalScroll.swift; sourceTree = "<group>"; };
-		92B3457D2BAF48BD00540F50 /* NewsSingleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSingleView.swift; sourceTree = "<group>"; };
+		92B3457D2BAF48BD00540F50 /* NewsSingleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSingleView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		92B3457E2BAF48BD00540F50 /* NewsHorizontalScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsHorizontalScroll.swift; sourceTree = "<group>"; };
 		92B3457F2BAF48BD00540F50 /* CategoriesHorizontalScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesHorizontalScroll.swift; sourceTree = "<group>"; };
 		92B345802BAF48BD00540F50 /* NewsSingleViewForVerticalScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSingleViewForVerticalScroll.swift; sourceTree = "<group>"; };

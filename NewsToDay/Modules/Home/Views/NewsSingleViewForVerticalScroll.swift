@@ -15,22 +15,27 @@ struct NewsSingleViewForVerticalScroll: View {
     
     var body: some View {
         HStack {
-            Image(image)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 100, height: 100)
-                .cornerRadius(15)
-            
-            VStack(alignment: .leading) {
-                Text(category)
-                    .font(Font.interRegular16)
-                    .foregroundColor(Color.grayPrimary)
-                    .padding(.bottom, 10)
-                 
-                Text(title)
-                    .font(Font.interMedium16)
+            Button {
+                
+            } label: {
+                Image(image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 100, height: 100)
+                    .cornerRadius(15)
+                
+                VStack(alignment: .leading) {
+                    Text(category)
+                        .font(Font.interRegular16)
+                        .foregroundColor(Color.grayPrimary)
+                        .padding(.bottom, 10)
+                    
+                    Text(title)
+                        .foregroundColor(.black)
+                        .font(Font.interMedium16)
+                }
+                .padding()
             }
-            .padding()
         }
     }
 }
