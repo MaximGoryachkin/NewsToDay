@@ -29,7 +29,7 @@ struct TabBar: View {
                     }
                     .tag(1)
                 
-                Text("Bookmarks Screen")
+                BookmarkView()
                     .tabItem {
                         Image(selectedView == 2 ? "icon.bookmark.hl" : "icon.bookmark")
                     }
