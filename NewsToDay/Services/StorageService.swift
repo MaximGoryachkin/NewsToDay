@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseDatabase
+import NewsNetworkManager
 
 final actor StorageService {
     static let shared = StorageService()
@@ -18,7 +19,7 @@ final actor StorageService {
     private var userName: String?
     private var userEmail: String?
     private var favoriteCategories = [String]()
-    private var bookmarks = [String]()
+    private var bookmarks = [ArticleEntity]()
     var needToShowOnbording: Bool {
         get {
             UserDefaults.standard.bool(forKey: "needToShowOnbording")
@@ -110,18 +111,39 @@ final actor StorageService {
         return favoriteCategories
     }
     
-    func setBookmakrs(bookmarks: [String]) async throws {
+    func addBookmark(_ bookmark: ArticleEntity) async throws {
+        var bookmarks = await getBookmarks()
+        bookmarks.append(bookmark)
+        try await setBookmakrs(bookmarks: bookmarks)
+    }
+    
+    func removeBookmark(_ bookmark: ArticleEntity) async throws {
+        var tempBookmarks = bookmarks
+        tempBookmarks.removeAll(where: { $0.title == bookmark.title && $0.author == bookmark.author })
+        try await setBookmakrs(bookmarks: bookmarks)
+        bookmarks = tempBookmarks
+    }
+    
+    func setBookmakrs(bookmarks: [ArticleEntity]) async throws {
         guard let userId else {
             return
         }
         
+        let ref = Database.database().reference().child("users").child(userId)
+        var encoded = [[String: Any]]()
+        let encoder = JSONEncoder()
+        for bookmark in bookmarks {
+            let e = try encoder.encode(bookmark)
+            let ee = try JSONSerialization.jsonObject(with: e) as! [String: Any]
+            encoded.append(ee)
+        }
+        try await ref.updateChildValues(["bookmarks": encoded])
+        
         self.bookmarks = bookmarks
         
-        let ref = Database.database().reference().child("users").child(userId)
-        try await ref.updateChildValues(["bookmarks": bookmarks])
     }
     
-    func getBookmarks() async -> [String] {
+    func getBookmarks() async -> [ArticleEntity] {
         
         guard let userId else {
             return []
@@ -135,7 +157,17 @@ final actor StorageService {
         guard let snapshot = try? await ref.getData() else {
             return []
         }
-        bookmarks = snapshot.value as? [String] ?? []
+        guard let dictionaries = snapshot.value as? [[String: Any]] else {
+            return []
+        }
+        var bookmarks = [ArticleEntity]()
+        for dict in dictionaries {
+            guard let bookmark = try? JSONDecoder().decode(ArticleEntity.self, from: JSONSerialization.data(withJSONObject: dict)) else {
+                continue
+            }
+            bookmarks.append(bookmark)
+        }
+        self.bookmarks = bookmarks
         return bookmarks
     }
     

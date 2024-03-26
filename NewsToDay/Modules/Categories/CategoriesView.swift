@@ -17,7 +17,7 @@ struct CategoriesView: View {
     
     private let router: RouterService
     private let flow: Flow
-    @State private var selectedCategories: Set<NewsNetworkManager.Category> = [.all]
+    @State private var selectedCategories: Set<NewsNetworkManager.Category> = Set()
     @State private var isAlertPresenting = false
     @State private var loading = false
     
@@ -30,21 +30,17 @@ struct CategoriesView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    Text(flow == .main ? "Categories" : "Select your favorite topics")
-                        .font(.interSemiBold24)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.init(top: .zero, leading: .zero, bottom: 8, trailing: .zero))
-                    Text(flow == .main ? "Thousands of articles in each category" : "Select some of your favorite topics to let us suggest better news for you.")
-                        .font(.interRegular16)
-                        .foregroundColor(.grayPrimary)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.init(top: .zero, leading: .zero, bottom: 32, trailing: .zero))
+                    TitleHeaderView(
+                        title: flow == .main ? "Categories" : "Select your favorite topics",
+                        subtitle: flow == .main ? "Thousands of articles in each category" : "Select some of your favorite topics to let us suggest better news for you."
+                    )
                     ScrollView {
                         LazyVGrid(
                             columns: [
-                                .init(.fixed(UIScreen.main.bounds.width * 0.44)),
-                                .init(.fixed(UIScreen.main.bounds.width * 0.44))
+                                .init(spacing: 16),
+                                .init()
                             ],
+                            spacing: 16,
                             content: {
                                 ForEach(NewsNetworkManager.Category.allCases, id: \.self) {
                                     category in
@@ -69,18 +65,16 @@ struct CategoriesView: View {
                             }
                         )
                     }
-                    if flow == .onbording {
-                        Button(
-                            action: tapNext,
-                            label: {
-                                Text(flow == .main ? "Save" : "Next")
-                                    .frame(maxWidth: .infinity, minHeight: 56)
-                                    .foregroundColor(.white)
-                                    .background(Color.purplePrimary)
-                                    .clipShape(.rect(cornerRadius: 12))
-                            }
-                        )
-                    }
+                    Button(
+                        action: tapNext,
+                        label: {
+                            Text(flow == .main ? "Save" : "Next")
+                                .frame(maxWidth: .infinity, minHeight: 56)
+                                .foregroundColor(.white)
+                                .background(Color.purplePrimary)
+                                .clipShape(.rect(cornerRadius: 12))
+                        }
+                    )
                 }
                 .padding(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
                 
@@ -99,10 +93,11 @@ struct CategoriesView: View {
         })
         .task {
             if flow == .main {
-                selectedCategories =
+                let selectedCategories =
                 Set((await StorageService.shared.getFavoriteCategories()).compactMap {
                     NewsNetworkManager.Category(rawValue: $0)
                 })
+                self.selectedCategories = selectedCategories.contains(.all) ? Set(NewsNetworkManager.Category.allCases) : selectedCategories
                 loading = false
             }
         }
@@ -116,20 +111,25 @@ struct CategoriesView: View {
     }
     
     private func tapCategory(_ category: NewsNetworkManager.Category) {
-        if category == .all {
-            if selectedCategories.contains(.all) {
-                selectedCategories = []
+        if selectedCategories.contains(category) {
+            if category == .all {
+                selectedCategories.removeAll()
             } else {
-                selectedCategories = Set(NewsNetworkManager.Category.allCases)
+                selectedCategories.remove(.all)
+                selectedCategories.remove(category)
             }
             return
         }
-        selectedCategories.remove(.all)
-        guard !selectedCategories.contains(category) else {
-            selectedCategories.remove(category)
+        if category == .all {
+            selectedCategories = Set(NewsNetworkManager.Category.allCases)
             return
+        } else {
+            selectedCategories.insert(category)
         }
-        selectedCategories.insert(category)
+        
+        if selectedCategories.count == NewsNetworkManager.Category.allCases.count - 1 {
+            selectedCategories.insert(.all)
+        }
     }
     
     private func tapNext() {

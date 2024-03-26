@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		777A2D662BAA47BF006B3D4C /* NewsNetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = 777A2D652BAA47BF006B3D4C /* NewsNetworkManager */; };
+		77BDA7EB2BB36F4F00C1EF6F /* TitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BDA7EA2BB36F4F00C1EF6F /* TitleHeaderView.swift */; };
 		77F677912BA9C47E00137EAF /* AuthorizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F677902BA9C47E00137EAF /* AuthorizeView.swift */; };
 		77F677932BA9C9BA00137EAF /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F677922BA9C9BA00137EAF /* UIApplication+Extension.swift */; };
 		77F677972BA9CB8A00137EAF /* AuthorizeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F677962BA9CB8A00137EAF /* AuthorizeStore.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77BDA7EA2BB36F4F00C1EF6F /* TitleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderView.swift; sourceTree = "<group>"; };
 		77F677902BA9C47E00137EAF /* AuthorizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeView.swift; sourceTree = "<group>"; };
 		77F677922BA9C9BA00137EAF /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		77F677962BA9CB8A00137EAF /* AuthorizeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeStore.swift; sourceTree = "<group>"; };
@@ -113,6 +115,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77BDA7EC2BB36F5300C1EF6F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				77FF1F912BAF7DA20012C173 /* CategoriesView.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		77BDA7ED2BB36F5900C1EF6F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				77BDA7EA2BB36F4F00C1EF6F /* TitleHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		77F677852BA9C1BD00137EAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +191,7 @@
 			children = (
 				899C63442BA74F3800BD32B4 /* Application */,
 				899C63392BA74BFC00BD32B4 /* Modules */,
+				77BDA7ED2BB36F5900C1EF6F /* Views */,
 				899C632A2BA73B5E00BD32B4 /* Extensions */,
 				77F677AB2BAA037400137EAF /* Services */,
 				899C63292BA7390F00BD32B4 /* Support */,
@@ -216,7 +235,7 @@
 			children = (
 				92B345772BAF489E00540F50 /* TabBar.swift */,
 				77FF1F8D2BAF73790012C173 /* ContentView.swift */,
-				77FF1F912BAF7DA20012C173 /* CategoriesView.swift */,
+				77BDA7EC2BB36F5300C1EF6F /* Categories */,
 				8913AEB32BAEC23900A92C84 /* Onboarding */,
 				CAA13AFF2BAE344F00B2CDD9 /* Profile */,
 				899C633A2BA74C0500BD32B4 /* Home */,
@@ -369,6 +388,7 @@
 				92B345812BAF48BD00540F50 /* NewsVerticalScroll.swift in Sources */,
 				92B3457A2BAF48B800540F50 /* HomeScreen.swift in Sources */,
 				77F677AD2BAA09E800137EAF /* AuthorizeService.swift in Sources */,
+				77BDA7EB2BB36F4F00C1EF6F /* TitleHeaderView.swift in Sources */,
 				92B345782BAF489E00540F50 /* TabBar.swift in Sources */,
 				77F677912BA9C47E00137EAF /* AuthorizeView.swift in Sources */,
 				8913AEB72BAED3AC00A92C84 /* OnboardingCardView.swift in Sources */,

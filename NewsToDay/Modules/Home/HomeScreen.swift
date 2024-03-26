@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import NewsNetworkManager
 
 struct HomeScreen: View {
     @State private var searchText = ""
