@@ -27,7 +27,7 @@ struct HomeScreen: View {
                             .foregroundColor(Color.grayPrimary)
                             .padding()
                         
-                        TextField("", text: $searchText)
+                        TextField("Search", text: $searchText)
                             .font(.title3)
                             .foregroundColor(.gray)
                             .background(Color.grayLighter)
