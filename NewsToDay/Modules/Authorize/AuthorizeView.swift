@@ -39,15 +39,10 @@ struct AuthorizeView: View {
             VStack {
                 ScrollView {
                     VStack {
-                        Text(store.state.loginType == .signIn ? "Welcome Back 👋" : "Welcome to NewsToDay")
-                            .font(.interSemiBold24)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.init(top: .zero, leading: .zero, bottom: 8, trailing: .zero))
-                        Text(store.state.loginType == .signIn ? "I am happy to see you again. You can continue where you left off by logging in" : "Hello, I guess you are new around here. You can start using the application after sign up.")
-                            .font(.interRegular16)
-                            .foregroundColor(.grayPrimary)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.init(top: .zero, leading: .zero, bottom: 32, trailing: .zero))
+                        TitleHeaderView(
+                            title: store.state.loginType == .signIn ? "Welcome Back 👋" : "Welcome to NewsToDay",
+                            subtitle: store.state.loginType == .signIn ? "I am happy to see you again. You can continue where you left off by logging in" : "Hello, I guess you are new around here. You can start using the application after sign up."
+                        )
                         VStack {
                             if store.state.loginType == .signUp {
                                 LoginTextField(text: $userName, placeholder: "Username", leftImage: .init(.iconProfile), secured: false)
@@ -128,6 +123,11 @@ struct AuthorizeView: View {
 
 struct LoginTextField: View {
     
+    enum FocusedField: Hashable {
+        case secured
+        case regular
+    }
+    
     @Binding var text: String
     let placeholder: String
     let leftImage: Image
@@ -135,6 +135,7 @@ struct LoginTextField: View {
     
     @State private var isSecured = true
     @State private var isEditing = false
+    @FocusState private var focusedField: FocusedField?
     
     var body: some View {
         HStack(spacing: 24) {
@@ -151,6 +152,7 @@ struct LoginTextField: View {
                 }
                 .font(.interMedium16)
                 .foregroundColor(Color.blackPrimary)
+                .focused($focusedField, equals: .secured)
             } else {
                 TextField(
                     "",
@@ -162,9 +164,13 @@ struct LoginTextField: View {
                 }
                 .font(.interMedium16)
                 .foregroundColor(Color.blackPrimary)
+                .focused($focusedField, equals: .regular)
             }
             if secured, !text.isEmpty {
-                Button(action: { isSecured.toggle() }) {
+                Button(action: {
+                    isSecured.toggle()
+                    focusedField = isSecured ? .secured : .regular
+                }) {
                     Image(systemName: isSecured ? "eye.slash" : "eye")
                         .accentColor(.gray)
                 }
